@@ -1,5 +1,5 @@
 # TODO:
-### - good waybar
+### - customizing waybar
 ### - [wifi menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
 ### - [bluetooth meu](https://github.com/nickclyde/rofi-bluetooth)
 
@@ -8,3 +8,4 @@
 ### - hyprland, hypridle, hyprlock (obvious)
 ### - ranger (terminal file browser)
 ### - swaync (notifications)
+### - waybar (the top bar)
