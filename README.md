@@ -1,3 +1,5 @@
+<img src="./preview.png">
+
 # TODO:
 ### - customizing waybar
 ### - [wifi menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
