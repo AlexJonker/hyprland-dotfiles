@@ -7,3 +7,4 @@
 ### - rofi-lbonn-wayland-git (rofi but better)
 ### - hyprland, hypridle, hyprlock (obvious)
 ### - ranger (terminal file browser)
+### - swaync (notifications)
