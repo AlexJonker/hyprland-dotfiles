@@ -6,8 +6,8 @@
 ### - [bluetooth meu](https://github.com/nickclyde/rofi-bluetooth)
 
 # REQUIREMENTS:
-### - rofi-lbonn-wayland-git (rofi but better)
-### - hyprland, hypridle, hyprlock (obvious)
-### - ranger (terminal file browser)
-### - swaync (notifications)
-### - waybar (the top bar)
+### - [rofi-lbonn-wayland-git](https://aur.archlinux.org/packages/rofi-lbonn-wayland-git) (rofi but better)
+### - [hyprland](https://archlinux.org/packages/extra/x86_64/hyprland/), [hypridle](https://archlinux.org/packages/extra/x86_64/hypridle/), [hyprlock](https://archlinux.org/packages/extra/x86_64/hyprlock/) (obvious)
+### - [ranger](https://archlinux.org/packages/extra/any/ranger/) (terminal file browser)
+### - [swaync](https://archlinux.org/packages/extra/x86_64/swaync/) (notifications)
+### - [waybar](https://archlinux.org/packages/extra/x86_64/waybar/) (the top bar)
