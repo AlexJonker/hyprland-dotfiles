@@ -18,3 +18,4 @@
 ### - [python-pywalfox](https://aur.archlinux.org/packages/python-pywalfox)
 ### - [pywal-spicetify](https://aur.archlinux.org/packages/pywal-spicetify)
 ### - nwg-displays
+### - spicetify-cli
