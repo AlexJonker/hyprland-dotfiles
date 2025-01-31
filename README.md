@@ -12,3 +12,7 @@
 ### - [ranger](https://archlinux.org/packages/extra/any/ranger/) (terminal file browser)
 ### - [swaync](https://archlinux.org/packages/extra/x86_64/swaync/) (notifications)
 ### - [waybar](https://archlinux.org/packages/extra/x86_64/waybar/) (the top bar)
+### - [pywal16](https://aur.archlinux.org/packages/python-pywal16)
+### - [betterdiscordctl](https://aur.archlinux.org/packages/betterdiscordctl)
+### - [pywal-discord](https://aur.archlinux.org/packages/pywal-discord-git)
+### - [python-pywalfox](https://aur.archlinux.org/packages/python-pywalfox)
