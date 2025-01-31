@@ -17,3 +17,11 @@ spotify
 swww
 cliphist
 wl-clipboard
+kitty
+fish
+starship
+pfetch-rs
+lsd
+waypaper
+hyprpicker
+otf-codenewroman-nerd

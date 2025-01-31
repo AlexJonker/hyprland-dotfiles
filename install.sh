@@ -10,6 +10,8 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     mkdir ~/Scripts
     cp -r ./scripts/* ~/Scripts/
 
+    chsh -s $(which fish)
+
     betterdiscordctl install
     spicetify auto
 else
