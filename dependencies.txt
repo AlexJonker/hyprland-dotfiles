@@ -25,3 +25,6 @@ lsd
 waypaper
 hyprpicker
 otf-codenewroman-nerd
+floorp-bin
+nemo
+nano
