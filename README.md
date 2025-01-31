@@ -1,7 +1,6 @@
 <img src="./src/preview.png">
 
 # TODO:
-### - Install script
 ### - customizing waybar
 ### - [wifi menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
 ### - [bluetooth meu](https://github.com/nickclyde/rofi-bluetooth)
