@@ -13,3 +13,4 @@ git clone https://github.com/MeneerAlex/hyprland-dotfiles
 cd hyprland-dotfiles
 bash ./install.sh
 ```
+## Make sure to configure your screen in nwg-displays.
