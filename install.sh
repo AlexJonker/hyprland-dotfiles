@@ -3,10 +3,15 @@ read -p "This script has not been fully tested, do you still want to continue? (
 
 if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     echo "Continuing..."
+
     yay -S --needed --noconfirm - < ./dependencies.txt
-    cp -r ./config/* ~/.config/
+
+    cp -r ./configs/* ~/.config/
     mkdir ~/Scripts
     cp -r ./scripts/* ~/Scripts/
+
+    betterdiscordctl install
+    spicetify auto
 else
     echo "Exiting..."
     exit 1

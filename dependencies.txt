@@ -8,10 +8,12 @@ waybar
 python-pywal16
 betterdiscordctl
 pywal-discord
+discord
 python-pywalfox
 pywal-spicetify
 nwg-displays
 spicetify-cli
+spotify
 swww
 cliphist
 wl-clipboard
