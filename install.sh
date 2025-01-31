@@ -1,0 +1,11 @@
+#!/bin/bash
+read -p "This script has not been fully tested, do you still want to continue? (y/n): " choice
+
+if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+    echo "Continuing..."
+    yay -S --needed --noconfirm - < ~/dependencies.txt
+    cp -r ./config/* ~/.config/
+else
+    echo "Exiting..."
+    exit 1
+fi

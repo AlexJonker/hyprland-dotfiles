@@ -1,0 +1,14 @@
+rofi-lbonn-wayland-git
+hyprland
+hypridle
+hyprlock
+ranger
+swaync
+waybar
+python-pywal16
+betterdiscordctl
+pywal-discord
+python-pywalfox
+pywal-spicetify
+nwg-displays
+spicetify-cli
