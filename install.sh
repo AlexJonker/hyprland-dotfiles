@@ -5,6 +5,8 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     echo "Continuing..."
     yay -S --needed --noconfirm - < ~/dependencies.txt
     cp -r ./config/* ~/.config/
+    mkdir ~/Scripts
+    cp -r ./scripts/* ~/Scripts/
 else
     echo "Exiting..."
     exit 1
