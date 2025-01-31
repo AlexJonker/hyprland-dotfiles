@@ -12,3 +12,6 @@ python-pywalfox
 pywal-spicetify
 nwg-displays
 spicetify-cli
+swww
+cliphist
+wl-clipboard
