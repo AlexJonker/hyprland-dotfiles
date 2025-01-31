@@ -7,6 +7,7 @@
 - **Bibata modern ice cursor**
 - **Dark mode**
 - **spicetify**
+- **adblockify**
 
 ---
 

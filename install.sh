@@ -14,6 +14,8 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
 
     betterdiscordctl install
     spicetify auto
+    sudo chmod a+wr /opt/spotify
+    sudo chmod a+wr /opt/spotify/Apps -R
 else
     echo "Exiting..."
     exit 1
