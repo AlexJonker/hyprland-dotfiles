@@ -49,9 +49,6 @@ then
     sudo sed -i "s/^Session.*/Session=\/usr\/share\/wayland-sessions\/hyprland.desktop/" /var/lib/sddm/state.conf
 
 
-    #swww-daemon
-    #swww img ~/Pictures/Wallpapers/4pqrn9xjdcsc1.jpeg
-    #bash ~/Scripts/pywal.sh
 
     flatpak install -y --system org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
