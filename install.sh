@@ -17,7 +17,6 @@ then
         makepkg -si --noconfirm
         cd ..
         rm -fr yay
-        exit 1
     fi
 
 
