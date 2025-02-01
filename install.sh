@@ -3,12 +3,18 @@ read -p "This script has not been fully tested, do you still want to continue? (
 
 if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     echo "Continuing..."
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
 
-    makepkg -si
-    cd ..
-    rm -fr yay
+    if ! command -v yay 2>&1 >/dev/null
+    then
+        git clone https://aur.archlinux.org/yay.git
+        cd yay
+
+        makepkg -si --noconfirm
+        cd ..
+        rm -fr yay
+        exit 1
+    fi
+
 
     yay -S --needed --noconfirm - < ./dependencies.txt
 
