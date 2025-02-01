@@ -16,8 +16,9 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     mkdir ~/Scripts
     cp -r ./scripts/* ~/Scripts/
 
+    mkdir ~/Pictures/
     mkdir ~/Pictures/Wallpapers/
-     cp -r ./Wallpapers/* ~/Pictures/Wallpapers/
+    cp -r ./Wallpapers/* ~/Pictures/Wallpapers/
 
     chsh -s $(which fish)
     sudo systemctl enable sddm
