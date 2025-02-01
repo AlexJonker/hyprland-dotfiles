@@ -5,6 +5,10 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]
 then
     echo "Continuing..."
 
+    sudo sed -i '/^OPTIONS=/s/\(.*\)debug\(.*\)/\1!debug\2/' /etc/makepkg.conf
+    sudo sed -i '/\[options\]/a ILoveCandy' /etc/pacman.conf
+    sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
+
     if ! command -v yay 2>&1 >/dev/null
     then
         git clone https://aur.archlinux.org/yay.git
@@ -15,10 +19,6 @@ then
         rm -fr yay
         exit 1
     fi
-
-    sudo sed -i '/^OPTIONS=/s/\(.*\)debug\(.*\)/\1!debug\2/' /etc/makepkg.conf
-    sudo sed -i '/\[options\]/a ILoveCandy' /etc/pacman.conf
-    sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
 
 
     yay -S --needed --noconfirm - < ./dependencies.txt
