@@ -16,6 +16,10 @@ then
         exit 1
     fi
 
+    sudo sed -i '/^OPTIONS=/s/\(.*\)debug\(.*\)/\1!debug\2/' /etc/makepkg.conf
+    sudo sed -i '/\[options\]/a ILoveCandy' /etc/pacman.conf
+    sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
+
 
     yay -S --needed --noconfirm - < ./dependencies.txt
 
