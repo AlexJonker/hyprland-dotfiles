@@ -32,7 +32,9 @@ then
     cp -r ./Wallpapers/* ~/Pictures/Wallpapers/
     cp ./avatar.png ~/Pictures/
 
-    cp -r ./themes/* /usr/share/themes
+    cp -r ./themes/* /usr/share/themes/
+
+    cp -r ./share/* ~/.local/share/
 
     chsh -s $(which fish)
     sudo systemctl enable sddm
