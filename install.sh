@@ -22,18 +22,18 @@ then
 
     yay -S --needed --noconfirm - < ./dependencies.txt
 
-    cp -r ./configs/* ~/.config/
+    cp -a ./configs/. ~/.config/
     mkdir ~/Scripts
-    cp -r ./scripts/* ~/Scripts/
+    cp -a ./scripts/. ~/Scripts/
 
     mkdir ~/Pictures/
     mkdir ~/Pictures/Wallpapers/
-    cp -r ./Wallpapers/* ~/Pictures/Wallpapers/
+    cp -a ./Wallpapers/. ~/Pictures/Wallpapers/
     cp ./avatar.png ~/Pictures/
 
-    cp -r ./themes/* /usr/share/themes/
+    sudo cp -a ./themes/. /usr/share/themes/
 
-    cp -r ./share/* ~/.local/share/
+    cp -a ./share/. ~/.local/share/
 
     chsh -s $(which fish)
     sudo systemctl enable sddm
