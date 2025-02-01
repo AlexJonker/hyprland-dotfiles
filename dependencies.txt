@@ -1,3 +1,4 @@
+linux-headers
 rofi-lbonn-wayland-git
 hyprland
 hypridle
