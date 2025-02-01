@@ -55,7 +55,7 @@ then
     read -p "Done! do you want to reboot? (y/n): " choice2
     if [[ "$choice2" == "y" || "$choice2" == "Y" ]]
     then
-      reboot
+        reboot
     fi
 else
     echo "Exiting..."
