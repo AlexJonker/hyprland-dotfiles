@@ -22,8 +22,8 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     chsh -s $(which fish)
     sudo systemctl enable sddm
 
-    discord
-    spotify
+    nohup discord &
+    nohup spotify &
     sleep 2
     killall Discord
     killall spotify
@@ -36,6 +36,11 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     sudo mkdir /etc/sddm.conf.d/
     echo -e "[Theme]\nCurrent=corners" | sudo tee /etc/sddm.conf.d/sdd.conf > /dev/null
 
+
+
+    echo "Done! rebooting in 5 seconds."
+    sleep 5
+    reboot
 else
     echo "Exiting..."
     exit 1
