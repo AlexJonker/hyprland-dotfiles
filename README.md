@@ -1,5 +1,7 @@
 # Hyprland Dotfiles Setup
 
+<img src="./src/preview.png">
+
 ## TODO
 - **Customize Waybar**
 - **Wi-Fi Menu Integration:** Add the [rofi-wifi-menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
