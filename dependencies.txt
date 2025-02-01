@@ -20,7 +20,7 @@ wl-clipboard
 kitty
 fish
 starship
-pfetch-rs
+pfetch-rs-bin
 lsd
 waypaper
 hyprpicker
@@ -33,3 +33,6 @@ qt5-graphicaleffects
 qt5-svg
 qt5-quickcontrols2
 sddm-theme-corners-git
+nwg-look
+bibata-cursor-theme-bin
+flatpak

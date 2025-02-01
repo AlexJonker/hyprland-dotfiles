@@ -21,19 +21,14 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     cp -r ./Wallpapers/* ~/Pictures/Wallpapers/
     cp ./avatar.png ~/Pictures/
 
+    cp -r ./themes/* /usr/share/themes
+
     chsh -s $(which fish)
     sudo systemctl enable sddm
 
-    nohup discord &
-    nohup spotify &
-    sleep 2
-    killall Discord
-    killall spotify
 
-    betterdiscordctl install
     sudo chmod a+wr /opt/spotify
     sudo chmod a+wr /opt/spotify/Apps -R
-    spicetify auto
 
     sudo mkdir /etc/sddm.conf.d/
 
@@ -41,8 +36,13 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     sudo sed -i "s/^User.*/User=$(whoami)/" /var/lib/sddm/state.conf
     sudo sed -i "s/^Session.*/Session=\/usr\/share\/wayland-sessions\/hyprland.desktop/" /var/lib/sddm/state.conf
 
+
+    swww-daemon
     swww img ~/Pictures/Wallpapers/4pqrn9xjdcsc1.jpeg
     bash ~/Scripts/pywal.sh
+
+    flatpak install -y --system org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+
     echo "Done! rebooting in 5 seconds."
     sleep 5
     reboot
