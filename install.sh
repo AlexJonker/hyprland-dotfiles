@@ -33,7 +33,7 @@ then
 
     sudo cp -a ./themes/. /usr/share/themes/
 
-    cp -a ./share/. ~/.local/share/
+    cp -a ./home/. ~/
 
     chsh -s $(which fish)
     sudo systemctl enable sddm
