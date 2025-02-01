@@ -36,7 +36,9 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     spicetify auto
 
     sudo mkdir /etc/sddm.conf.d/
+
     echo -e "[Theme]\nCurrent=corners" | sudo tee /etc/sddm.conf.d/sdd.conf > /dev/null
+    sudo sed -i "s/^User.*/User=$(whoami)/" /var/lib/sddm/state.conf
     sudo sed -i "s/^Session.*/Session=\/usr\/share\/wayland-sessions\/hyprland.desktop/" /var/lib/sddm/state.conf
 
     swww img ~/Pictures/Wallpapers/4pqrn9xjdcsc1.jpeg
