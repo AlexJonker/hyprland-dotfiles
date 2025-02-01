@@ -1,7 +1,8 @@
 #!/bin/bash
 read -p "This script has not been fully tested, do you still want to continue? (y/n): " choice
 
-if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+if [[ "$choice" == "y" || "$choice" == "Y" ]]
+then
     echo "Continuing..."
 
     if ! command -v yay 2>&1 >/dev/null
@@ -49,9 +50,11 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
 
     flatpak install -y --system org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
-    echo "Done! rebooting in 5 seconds."
-    sleep 5
-    reboot
+    read -p "Done! do you want to reboot? (y/n): " choice2
+    if [[ "$choice2" == "y" || "$choice2" == "Y" ]]
+    then
+      reboot
+    fi
 else
     echo "Exiting..."
     exit 1
