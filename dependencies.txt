@@ -28,3 +28,8 @@ otf-codenewroman-nerd
 floorp-bin
 nemo
 nano
+sddm
+qt5-graphicaleffects
+qt5-svg
+qt5-quickcontrols2
+sddm-theme-corners-git

@@ -1,34 +1,21 @@
 # Hyprland Dotfiles Setup
 
-## TODO:
+## TODO
 - **Customize Waybar**
 - **Wi-Fi Menu Integration:** Add the [rofi-wifi-menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
 - **Bluetooth Menu Integration:** Use [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth)
-- **Bibata modern ice cursor**
-- **Dark mode**
-- **spicetify**
-- **adblockify**
+- **Bibata Modern Ice Cursor**
+- **Dark Mode**
+- **Spicetify**
+- **Adblockify**
 
 ---
 
 ## Installation Guide
 
-### **1. Backup Configuration Files**
-Before proceeding, **create a backup of your `.config` folder** to ensure you can restore your previous setup if needed.
+### **This is meant to be run on a fresh Arch Linux install!**
 
-### **2. Install Yay (AUR Helper)**
-
-
-```bash
-# Clone the yay repository
-git clone https://aur.archlinux.org/yay.git
-cd yay
-
-# Build and install yay
-makepkg -si
-```
-
-### **3. Clone and Run the Install Script**
+### **1. Clone and Run the Install Script**
 
 ```bash
 # Clone the Hyprland dotfiles repository
@@ -39,11 +26,11 @@ cd hyprland-dotfiles
 bash ./install.sh
 ```
 
-### **4. Configure Display Settings**
+### **2. Configure Display Settings**
+
 After installation, configure your screen layout using `nwg-displays`:
 
 ```bash
 nwg-displays
 ```
 
----
