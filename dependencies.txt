@@ -27,6 +27,8 @@ hyprpicker
 otf-codenewroman-nerd
 floorp-bin
 nemo
+nemo-fileroller
+nemo-preview
 nano
 sddm
 qt5-graphicaleffects
@@ -36,3 +38,6 @@ sddm-theme-corners-git
 nwg-look
 bibata-cursor-theme-bin
 flatpak
+tela-circle-icon-theme-all
+hyprpolkitagent
+xed
