@@ -5,58 +5,72 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]
 then
     echo "Continuing..."
 
+    # Modify makepkg.conf and pacman.conf
     sudo sed -i '/^OPTIONS=/s/\(.*\)debug\(.*\)/\1!debug\2/' /etc/makepkg.conf
     sudo sed -i '/\[options\]/a ILoveCandy' /etc/pacman.conf
     sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
 
-    if ! command -v yay 2>&1 >/dev/null
+    # Check if yay is installed, if not, install it
+    if ! command -v yay &>/dev/null
     then
+        echo "yay not found. Installing yay..."
         git clone https://aur.archlinux.org/yay.git
         cd yay
-
         makepkg -si --noconfirm
         cd ..
-        rm -fr yay
+        rm -rf yay
     fi
 
-
+    # Install dependencies from dependencies.txt
     yay -S --needed --noconfirm - < ./dependencies.txt
 
+    # Copy configs, scripts, wallpapers, etc.
     cp -a ./configs/. ~/.config/
-    mkdir ~/Scripts
+    mkdir -p ~/Scripts
     cp -a ./scripts/. ~/Scripts/
 
-    mkdir ~/Pictures/
-    mkdir ~/Pictures/Wallpapers/
+    mkdir -p ~/Pictures/Wallpapers
     cp -a ./Wallpapers/. ~/Pictures/Wallpapers/
     cp ./avatar.png ~/Pictures/
 
+    # Install system themes
     sudo cp -a ./themes/. /usr/share/themes/
 
     cp -a ./home/. ~/
 
+    # Change shell to fish
     chsh -s $(which fish)
+
+    # Enable sddm (simple login manager)
     sudo systemctl enable sddm
 
-
+    # Adjust Spotify permissions (ensure it's necessary for your setup)
     sudo chmod a+wr /opt/spotify
     sudo chmod a+wr /opt/spotify/Apps -R
 
-    sudo mkdir /etc/sddm.conf.d/
+    # Set SDDM theme configuration
+    sudo mkdir -p /etc/sddm.conf.d/
 
     echo -e "[Theme]\nCurrent=corners" | sudo tee /etc/sddm.conf.d/sdd.conf > /dev/null
     sudo touch /var/lib/sddm/state.conf
-    grep -q "^User=" /var/lib/sddm/state.conf || echo "User=$(whoami)" | sudo tee -a /var/lib/sddm/state.conf
-    grep -q "^Session=" /var/lib/sddm/state.conf || echo "Session=/usr/share/wayland-sessions/hyprland.desktop" | sudo tee -a /var/lib/sddm/state.conf
 
+    # Set last logged-in user in SDDM state.conf
+    echo -e "[Last]
+    # Name of the last logged-in user.
+    # This user will be preselected when the login screen appears
+    User=$(whoami)
 
+    # Name of the session for the last logged-in user.
+    # This session will be preselected when the login screen appears.
+    Session=/usr/share/wayland-sessions/hyprland.desktop" | sudo tee /var/lib/sddm/state.conf > /dev/null
 
-
+    # Install GTK3 themes via Flatpak
     flatpak install -y --system org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
     echo "Please reboot and run the post-install.sh script."
 
-    read -p "Done! do you want to reboot? (y/n): " choice2
+    # Reboot prompt
+    read -p "Done! Do you want to reboot? (y/n): " choice2
     if [[ "$choice2" == "y" || "$choice2" == "Y" ]]
     then
         reboot
