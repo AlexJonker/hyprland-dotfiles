@@ -7,6 +7,8 @@ echo "----------------------------------"
 echo $wallpaper
 echo "----------------------------------"
 
+cp $wallpaper ~/.config/hypr/current_wallpaper
+
 wal -i "$wallpaper" &&
 #sleep 5 &&
 pywalfox update &&
