@@ -11,14 +11,4 @@ wal -i "$wallpaper" &&
 #sleep 5 &&
 pywalfox update &&
 pywal-discord #&&
-#pywal-spicetify "$spicetify_theme"
-
-
-
-
-
-
-
-
-#spicetify watch -s &
-#sleep 1 && pkill spicetify
+pywal-spicetify "$spicetify_theme"
