@@ -45,12 +45,16 @@ then
     sudo mkdir /etc/sddm.conf.d/
 
     echo -e "[Theme]\nCurrent=corners" | sudo tee /etc/sddm.conf.d/sdd.conf > /dev/null
-    sudo sed -i "s/^User.*/User=$(whoami)/" /var/lib/sddm/state.conf
-    sudo sed -i "s/^Session.*/Session=\/usr\/share\/wayland-sessions\/hyprland.desktop/" /var/lib/sddm/state.conf
+    sudo touch /var/lib/sddm/state.conf
+    grep -q "^User=" /var/lib/sddm/state.conf || echo "User=$(whoami)" | sudo tee -a /var/lib/sddm/state.conf
+    grep -q "^Session=" /var/lib/sddm/state.conf || echo "Session=/usr/share/wayland-sessions/hyprland.desktop" | sudo tee -a /var/lib/sddm/state.conf
+
 
 
 
     flatpak install -y --system org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+
+    echo "Please reboot and run the post-install.sh script."
 
     read -p "Done! do you want to reboot? (y/n): " choice2
     if [[ "$choice2" == "y" || "$choice2" == "Y" ]]
