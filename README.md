@@ -6,10 +6,10 @@
 - **Customize Waybar**
 - **Wi-Fi Menu Integration:** Add the [rofi-wifi-menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
 - **Bluetooth Menu Integration:** Use [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth)
-- **Bibata Modern Ice Cursor**
 - **Dark Mode**
-- **Spicetify**
-- **Adblockify**
+- **Mic volume in settings bar**
+- **Functioning buttons in settings bar**
+
 
 ---
 
