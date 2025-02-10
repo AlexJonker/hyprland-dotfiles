@@ -1,5 +1,3 @@
-/* WiFi menu */
-
 configuration {
   font:                     "JetBrainsMono Nerd Font 10";
 }
