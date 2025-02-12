@@ -51,7 +51,8 @@ then
     # Set SDDM theme configuration
     sudo mkdir -p /etc/sddm.conf.d/
 
-    echo -e "[Theme]\nCurrent=corners" | sudo tee /etc/sddm.conf.d/sdd.conf > /dev/null
+    echo -e "[Theme]\nCurrent=corners" | sudo tee /etc/sddm.conf > /dev/null
+    sudo chmod -R 777 /usr/share/sddm/themes/corners/backgrounds # allow the pywal script to write the image
     sudo touch /var/lib/sddm/state.conf
 
     # Set last logged-in user in SDDM state.conf
