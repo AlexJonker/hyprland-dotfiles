@@ -35,8 +35,9 @@ then
 
     # Install system themes
     sudo cp -a ./themes/. /usr/share/themes/
-
-    cp -a ./home/. ~/
+    gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
+    settings set org.gnome.desktop.interface icon-theme Tela
+    gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Ice
 
     # Change shell to fish
     chsh -s $(which fish)

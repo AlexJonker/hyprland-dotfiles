@@ -43,3 +43,4 @@ tela-circle-icon-theme-all
 hyprpolkitagent
 xed
 mission-center
+tela-icon-theme
