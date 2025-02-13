@@ -6,9 +6,11 @@
 - **Customize Waybar**
 - **Wi-Fi Menu Integration:** Add the [rofi-wifi-menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
 - **Bluetooth Menu Integration:** Use [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth)
-- **Dark Mode**
 - **Mic volume in settings bar**
 - **Functioning buttons in settings bar**
+- **Change the dropdown in waybar to something better.**
+- **[this](https://github.com/eylles/pywal16-libadwaita/issues/10) in the install script**
+- **swaync menu should follow color instantly**
 
 
 ---

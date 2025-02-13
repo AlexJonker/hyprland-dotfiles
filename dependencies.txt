@@ -44,3 +44,4 @@ hyprpolkitagent
 xed
 mission-center
 tela-icon-theme
+bluez-utils
