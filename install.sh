@@ -66,6 +66,23 @@ then
     # This session will be preselected when the login screen appears.
     Session=/usr/share/wayland-sessions/hyprland.desktop" | sudo tee /var/lib/sddm/state.conf > /dev/null
 
+    sudo sed -i 's|^BgSource=.*|BgSource="backgrounds/current_wallpaper"|' /usr/share/sddm/themes/corners/theme.conf
+
+    # gtk and qt theme changing
+    sudo flatpak override --filesystem=xdg-config/gtk-3.0
+    sudo flatpak override --filesystem=xdg-config/gtk-4.0
+    mkdir ~/.config/presets/user
+    cd ~/.config/presets/user
+    ln -s ~/.cache/wal/pywal.json
+
+    cd ~/.config/Kvantum
+    mkdir pywal
+    cd pywal
+    ln -s ~/.cache/wal/pywal.kvconfig
+    ln -s ~/.cache/wal/pywal.svg
+    ln -s ~/.cache/wal/pywal.kvconfig
+    ln -s ~/.cache/wal/pywal.svg
+
     # Install GTK3 themes via Flatpak
     flatpak install -y --system org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
