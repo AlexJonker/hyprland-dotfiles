@@ -16,6 +16,8 @@ wal -i "$wallpaper" &&
 pywalfox update
 pywal-discord
 killall swaync && swaync &
+gradience-cli apply -n pywal --gtk both
+
 
 
 

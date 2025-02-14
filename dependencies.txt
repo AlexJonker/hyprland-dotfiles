@@ -46,3 +46,5 @@ mission-center
 tela-icon-theme
 bluez-utils
 neovim
+kvantum
+gradience
