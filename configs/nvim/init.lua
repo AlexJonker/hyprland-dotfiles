@@ -38,6 +38,11 @@ end)
 
 
 --custom made by alex below--
+
+
+local pywal16 = require('pywal16')
+
+pywal16.setup()
 -- Save with Ctrl+S
 vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>", { noremap = true, silent = true })
