@@ -1,5 +1,5 @@
 linux-headers
-rofi-lbonn-wayland-git
+rofi-wayland
 hyprland
 hypridle
 hyprlock
