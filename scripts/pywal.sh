@@ -7,17 +7,15 @@ echo "----------------------------------"
 echo $wallpaper
 echo "----------------------------------"
 
-cp $wallpaper ~/.config/hypr/current_wallpaper
-cp $wallpaper /usr/share/sddm/themes/corners/backgrounds/current_wallpaper
+cp "$wallpaper" ~/.config/hypr/current_wallpaper
+cp "$wallpaper" /usr/share/sddm/themes/corners/backgrounds/current_wallpaper
 
 
 
 wal -i "$wallpaper" &&
 pywalfox update
 pywal-discord
-killall swaync && swaync &
-gradience-cli apply -n pywal --gtk both
-
+killall swaync && swaync
 
 
 
@@ -53,4 +51,5 @@ done
 
 
 pywal-spicetify "$spicetify_theme"
+
 
