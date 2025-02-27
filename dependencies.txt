@@ -48,3 +48,4 @@ bluez-utils
 neovim
 kvantum
 gradience
+lazygit
