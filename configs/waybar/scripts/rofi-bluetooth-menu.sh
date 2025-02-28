@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-notify-send "Getting list of available Bluetooth devices..."
+#notify-send "Getting list of available Bluetooth devices..."
 # Get a list of available Bluetooth devices and morph it into a nice-looking list
 bt_list=$(bluetoothctl devices | awk '{print $3, $4, $5, $6, $7, $8}' | sed 's/  */ /g' | sort | uniq)
 
