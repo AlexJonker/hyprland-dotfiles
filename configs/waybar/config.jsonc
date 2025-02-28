@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","bluetooth","network","battery"],
+        "modules-right": ["group/expand","bluetooth","network","battery","custom/power"],
 
 
         "hyprland/workspaces": {
@@ -69,7 +69,7 @@
             "format": "{capacity}% {icon}",
             "format-charging": "{capacity}% 󰂄",
             "format-plugged": "{capacity}% 󰂄 ",
-            "format-alt": "{time} {icon}",
+            "on-click": "bash ~/.config/waybar/scripts/rofi-power-profile-menu.sh",
             "format-icons": [
                 "󰁻",
             "󰁼",
@@ -78,6 +78,13 @@
             "󰂂",
             "󰁹"
             ]
+        },
+        "custom/power": {
+            "format": "{}",
+            "exec": "bash ~/.config/waybar/scripts/get-power-profile.sh",
+            "tooltip": true,
+            "interval": 1,
+            "on-click": "bash ~/.config/waybar/scripts/rofi-power-profile-menu.sh"
         },
         "custom/pacman": {
             "format": "󰅢 {}",
