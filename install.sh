@@ -28,6 +28,8 @@ then
     cp -a ./configs/. ~/.config/
     mkdir -p ~/Scripts
     cp -a ./scripts/. ~/Scripts/
+    
+    mkdir ~/Pictures/Wallpapers
 
     mkdir -p ~/Pictures/Wallpapers
     cp -a ./Wallpapers/. ~/Pictures/Wallpapers/
