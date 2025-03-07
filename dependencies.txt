@@ -50,3 +50,4 @@ kvantum
 gradience
 lazygit
 grimblast
+power-profiles-daemon
