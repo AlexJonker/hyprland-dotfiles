@@ -5,7 +5,7 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]
 then
     echo "Continuing..."
 
-    swww img ~/Pictures/Wallpapers/ForestHouse.png
+    swww img ~/Pictures/Wallpapers/wp6451495-purple-minimal-mountain-wallpapers.jpg
     bash ~/Scripts/pywal.sh
 
 
