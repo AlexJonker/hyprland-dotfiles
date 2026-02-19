@@ -277,8 +277,18 @@ layout {
 // This line starts noctalia shell.
 spawn-at-startup "qs" "-c" "noctalia-shell" "--no-duplicate"
 
-// Tis line starts the zlaunch daemon
+// This line starts the zlaunch daemon
 spawn-at-startup "zlaunch"
+
+// This line starts kwallet
+spawn-at-startup "kwalletd6"
+
+// This line starts hyprpolkit
+spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent" // TODO: replace with a different one with better customization.
+
+// These lines start wl-paste
+spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
+spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
