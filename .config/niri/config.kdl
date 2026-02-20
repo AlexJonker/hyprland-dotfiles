@@ -283,6 +283,9 @@ spawn-at-startup "zlaunch"
 // This line starts kwallet
 spawn-at-startup "kwalletd6"
 
+// This line starts kde connect daemon
+spawn-at-startup "kdeconnectd"
+
 // This line starts hyprpolkit
 spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent" // TODO: replace with a different one with better customization.
 
