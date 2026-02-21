@@ -8,13 +8,16 @@ NIconButtonHot {
     property var pluginApi: null
 
     function getTooltip(device) {
-        const batteryLine = (device !== null && device.reachable && device.paired && device.battery !== -1)
-            ? ("Battery: " + device.battery + "%\n")
-            : ""
+        const batteryLabel = pluginApi?.tr("panel.card.battery") || "Battery";
+        const stateLabel = pluginApi?.tr("control_center.state-label") || "State";
 
-        const stateLine = "State: " + KDEConnectUtils.getConnectionState(device, KDEConnect.daemonAvailable)
+        const batteryLine = (device !== null && device.reachable && device.paired && device.battery !== -1) ? (batteryLabel + ": " + device.battery + "%\n") : "";
 
-        return batteryLine + stateLine
+        const stateKey = KDEConnectUtils.getConnectionStateKey(device, KDEConnect.daemonAvailable);
+        const stateValue = pluginApi?.tr(stateKey) || "Unknown";
+        const stateLine = stateLabel + ": " + stateValue;
+
+        return batteryLine + stateLine;
     }
 
     icon: KDEConnectUtils.getConnectionStateIcon(KDEConnect.mainDevice, KDEConnect.daemonAvailable)

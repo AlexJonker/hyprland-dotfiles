@@ -18,7 +18,7 @@ Item {
   readonly property var geometryPlaceholder: panelContainer
 
   property real contentPreferredWidth: 440 * Style.uiScaleRatio
-  property real contentPreferredHeight: 360 * Style.uiScaleRatio
+  property real contentPreferredHeight: 360 * Style.uiScaleRatio * Settings.data.ui.fontDefaultScale
 
   readonly property bool allowAttach: true
 
@@ -171,13 +171,14 @@ Item {
         Layout.fillWidth: true
         Layout.fillHeight: true
         active: true
-        sourceComponent: (!KDEConnect.daemonAvailable)                                        ? daemonNotRunningCard   :
-                         (deviceSwitcherOpen)                                                 ? deviceSwitcherCard     :
-                         (KDEConnect.mainDevice !== null && !KDEConnect.mainDevice.reachable) ? deviceNotReachableCard :
-                         (KDEConnect.mainDevice !== null &&  KDEConnect.mainDevice.paired)    ? deviceConnectedCard    :
-                         (KDEConnect.mainDevice !== null && !KDEConnect.mainDevice.paired)    ? noDevicePairedCard     :
-                         (KDEConnect.devices.length === 0)                                    ? noDevicesAvailableCard :
-                         ""
+        sourceComponent:  (KDEConnect.qdbusCmd === null || KDEConnect.qdbusCmd === "")         ? qdbusNotFoundCard                :
+                          (!KDEConnect.daemonAvailable)                                        ? kdeConnectDaemonNotRunningCard   :
+                          (deviceSwitcherOpen)                                                 ? deviceSwitcherCard               :
+                          (KDEConnect.mainDevice !== null && !KDEConnect.mainDevice.reachable) ? deviceNotReachableCard           :
+                          (KDEConnect.mainDevice !== null &&  KDEConnect.mainDevice.paired)    ? deviceConnectedCard              :
+                          (KDEConnect.mainDevice !== null && !KDEConnect.mainDevice.paired)    ? noDevicePairedCard               :
+                          (KDEConnect.devices.length === 0)                                    ? noDevicesAvailableCard           :
+                          ""
       }
 
       Component {
@@ -251,21 +252,22 @@ Item {
             id: deviceStatsWithPhone
 
             RowLayout {
-
-              Item {
-                width: 7 * Style.uiScaleRatio
-              }
+              spacing: Style.marginM
 
               Rectangle {
                 width: 100 * Style.uiScaleRatio
                 color: "transparent"
                 Layout.fillHeight: true
-                Layout.leftMargin: Style.marginL
+                Layout.alignment: Qt.AlignCenter
 
                 PhoneDisplay {
-                  Layout.alignment: Qt.AlignTop
+                  Layout.alignment: Qt.AlignCenter
                   backgroundImage: ""
                 }
+              }
+
+              Item {
+                width: Style.marginL
               }
 
               // Stats Grid
@@ -580,8 +582,64 @@ Item {
         }
       }
 
+
       Component {
-        id: daemonNotRunningCard
+        id: qdbusNotFoundCard
+
+        Rectangle {
+          Layout.fillWidth: true
+          Layout.fillHeight: true
+          color: Color.mSurfaceVariant
+          radius: Style.radiusM
+
+          ColumnLayout {
+            id: emptyState
+            anchors.fill: parent
+            anchors.margins: Style.marginM
+            spacing: Style.marginM
+
+            Item {
+              Layout.fillHeight: true
+            }
+
+            NIcon {
+              icon: "exclamation-circle"
+              pointSize: 48 * Style.uiScaleRatio
+              color: Color.mOnSurfaceVariant
+              Layout.alignment: Qt.AlignHCenter
+            }
+
+            Item {}
+
+            NText {
+              text: pluginApi?.tr("panel.qdbus-error.unavailable-title")
+              pointSize: Style.fontSizeL
+              color: Color.mOnSurfaceVariant
+              Layout.alignment: Qt.AlignCenter
+              horizontalAlignment: Text.AlignHCenter
+              verticalAlignment: Text.AlignVCenter
+            }
+
+            NText {
+              text: pluginApi?.tr("panel.qdbus-error.unavailable-desc")
+              pointSize: Style.fontSizeS
+              color: Color.mOnSurfaceVariant
+              Layout.alignment: Qt.AlignCenter
+              horizontalAlignment: Text.AlignHCenter
+              verticalAlignment: Text.AlignVCenter
+              wrapMode: Text.WordWrap
+              Layout.fillWidth: true
+            }
+
+            Item {
+              Layout.fillHeight: true
+            }
+          }
+        }
+      }
+
+      Component {
+        id: kdeConnectDaemonNotRunningCard
 
         Rectangle {
           Layout.fillWidth: true

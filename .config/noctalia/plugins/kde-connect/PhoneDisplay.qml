@@ -11,8 +11,8 @@ Rectangle {
   property string backgroundImage: "" // Path to background image
 
   // Scale to parent while maintaining iPhone-like proportions
-  width: parent ? parent.width : 115
   height: parent ? parent.height : 235
+  width: (height / 235) * 115
 
   // Dynamically scaled corner radius based on size
   readonly property real scaleFactor: Math.min(width / 115, height / 235)

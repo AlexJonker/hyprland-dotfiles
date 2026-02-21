@@ -5,32 +5,33 @@ import QtQuick
 QtObject {
   function getConnectionStateIcon(device, daemonAvailable) {
     if (!daemonAvailable)
-      return "exclamation-circle"
+      return "exclamation-circle";
 
     if (device === null || !device.reachable)
-      return "device-mobile-off"
+      return "device-mobile-off";
 
     if (device.notificationIds.length > 0)
-      return "device-mobile-message"
+      return "device-mobile-message";
     else if (device.charging)
-      return "device-mobile-charging"
+      return "device-mobile-charging";
     else
-      return "device-mobile"
+      return "device-mobile";
   }
 
-  function getConnectionState(device, daemonAvailable) {
+  // Returns raw state keys for translation
+  function getConnectionStateKey(device, daemonAvailable) {
     if (!daemonAvailable)
-      return "Unavailable"
+      return "control_center.state.unavailable";
 
     if (device === null)
-      return "No device"
+      return "control_center.state.no-device";
 
     if (!device.reachable)
-      return "Disconnected"
+      return "control_center.state.disconnected";
 
     if (!device.paired)
-      return "Not paired"
+      return "control_center.state.not-paired";
 
-    return "Connected"
+    return "control_center.state.connected";
   }
 }
