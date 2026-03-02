@@ -33,13 +33,8 @@ then
     
     mkdir -p ~/Pictures/Screenshots
 
-    read -p "Do you want to download wallpapers? (6GB) (y/N): " dl_wallpapers
-    if [[ "$dl_wallpapers" == "y" || "$dl_wallpapers" == "Y" ]]; then
-        git clone https://github.com/AlexJonker/Wallpapers ~/Pictures/Wallpapers
-    else
-        mkdir -p ~/Pictures/Wallpapers
-        cp -a ./Wallpapers/. ~/Pictures/Wallpapers/
-    fi
+    mkdir -p ~/Pictures/Wallpapers
+    cp -a ./Wallpapers/. ~/Pictures/Wallpapers/
     cp ./avatar.png ~/Pictures/
 
     # Install system themes
