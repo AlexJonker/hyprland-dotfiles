@@ -22,5 +22,5 @@ git clone https://github.com/AlexJonker/linux-dotfiles -b artix-niri --depth 1
 cd linux-dotfiles
 
 # Run the install script
-bash ./install.sh
+./install.sh
 ```
