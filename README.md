@@ -18,7 +18,7 @@
 
 ```bash
 # Clone the Hyprland dotfiles repository
-git clone https://github.com/AlexJonker/linux-dotfiles -b artix-niri --depth 1
+git clone https://github.com/AlexJonker/linux-dotfiles -b niri --depth 1
 cd linux-dotfiles
 
 # Run the install script
