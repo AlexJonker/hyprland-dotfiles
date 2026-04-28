@@ -82,7 +82,7 @@ cursor {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-2" {
     // Uncomment this line to disable this output.
     // off
 
@@ -92,10 +92,10 @@ cursor {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
+    mode "1920x1200@165.019"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    scale 1
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -286,19 +286,19 @@ spawn-at-startup "kwalletd6"
 // This line starts kde connect daemon
 spawn-at-startup "kdeconnectd"
 
-// This line starts hyprpolkit
-spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent" // TODO: replace with a different one with better customization.
+// This line starts gamemoded
+spawn-at-startup "gamemoded"
 
-// These lines start wl-paste
-spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
-spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
+// This line starts hyprpolkit
+// spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent" // TODO: replace with a different one with better customization.
+
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -395,8 +395,8 @@ binds {
     Mod+Space hotkey-overlay-title="Run an Application: zlaunch" { spawn "zlaunch" "toggle"; }
     Mod+E hotkey-overlay-title="Open File Explorer: nemo" { spawn "nemo"; }
     Mod+B hotkey-overlay-title="Open a Browser: zen" { spawn "zen-browser"; }
-    Mod+Period hotkey-overlay-title="Open emoji picker" { spawn-sh "BEMOJI_PICKER_CMD=\"fuzzel -d\" bemoji"; }
-    Mod+V hotkey-overlay-title="Open clipboard history" { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+    Mod+Period hotkey-overlay-title="Open emoji picker" { spawn-sh "zlaunch toggle --modes emojis"; }
+    Mod+V hotkey-overlay-title="Open clipboard history" { spawn-sh "zlaunch toggle --modes clipboard"; }
 
     Super+L hotkey-overlay-title="Lock the Screen: noctalia" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 
@@ -408,6 +408,7 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86Launch3          allow-when-locked=true { spawn-sh "playerctl play-pause"; } // Armory crate button on asus laptop
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
@@ -650,3 +651,6 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+include "./noctalia.kdl"
+
