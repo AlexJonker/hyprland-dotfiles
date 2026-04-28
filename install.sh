@@ -13,6 +13,7 @@ printf '\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist\n' | sudo te
 sudo pacman -Syu --noconfirm
 
 # Install yay
+sudo pacman -S base-devel --noconfirm --needed
 rm -rf yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
