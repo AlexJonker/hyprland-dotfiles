@@ -1,0 +1,11 @@
+theme = gruvbox-material-soft-dark
+
+font-family = "CaskaydiaCove Nerd Font Mono"
+font-size = 9
+
+window-padding-x = 15
+window-padding-y = 15
+
+#background-opacity = 0.6
+
+shell-integration = detect
