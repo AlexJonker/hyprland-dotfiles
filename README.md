@@ -1,4 +1,4 @@
-# Void and niri dotfiles
+# Archlinux and niri dotfiles
 
 <!-- ![img](./src/preview.png)
 ![img](./src/preview2.png) -->
