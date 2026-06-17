@@ -5,13 +5,8 @@
 
 ## Setup
 
-### **1. Clone and Run the Install Script**
-
+### Clone the repo
 ```bash
-# Clone the repository
 git clone https://github.com/AlexJonker/linux-dotfiles -b mango --depth 1
-cd linux-dotfiles
-
-# Run the install script
-bash ./install.sh
 ```
+Move all files to the correct places and use nwg-look to apply the Gruvbox-B-MB-Dark-Soft-Square theme and Gruvbox Plus Dark icon theme.
