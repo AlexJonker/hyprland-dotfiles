@@ -34,7 +34,7 @@ empty_state_color = "#928374"        # gray
 
 [font]
 font_family = "CaskaydiaCove Nerd Font Mono"
-font_size = 15
+font_size = 20
 
 [calculator]
 icon_background = "#83a59826"        # Aqua

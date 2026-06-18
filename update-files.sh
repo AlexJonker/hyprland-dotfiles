@@ -8,6 +8,8 @@ ITEMS=(
   "$HOME/.config/opencode/tui.json"
   "$HOME/.config/Equicord/themes"
 
+  "$HOME/.nanorc"
+
   "$HOME/.themes/Gruvbox-B-MB-Dark-Soft-Square"
   "$HOME/.icons/Gruvbox-Plus-Dark"
 

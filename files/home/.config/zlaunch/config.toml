@@ -1,8 +1,6 @@
 theme = "gruvbox"
-#launcher_size = [600.0, 400.0]
-hyprland_auto_blur = false
-enable_transparency = false
-
+# launcher_size = [600.0, 400.0]
+enable_transparency=false
 
 [[search_providers]]
 name = "YouTube"
