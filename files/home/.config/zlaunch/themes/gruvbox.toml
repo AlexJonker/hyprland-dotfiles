@@ -34,6 +34,7 @@ empty_state_color = "#928374"        # gray
 
 [font]
 font_family = "CaskaydiaCove Nerd Font Mono"
+mono_font_family = "CaskaydiaCove Nerd Font Mono"
 font_size = 20
 
 [calculator]
