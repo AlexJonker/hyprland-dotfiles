@@ -6,6 +6,7 @@ ITEMS=(
   "$HOME/.config/vibepanel"
   "$HOME/.config/zlaunch"
   "$HOME/.config/opencode/tui.json"
+  "$HOME/.config/Equicord/themes"
 
   "$HOME/.themes/Gruvbox-B-MB-Dark-Soft-Square"
   "$HOME/.icons/Gruvbox-Plus-Dark"

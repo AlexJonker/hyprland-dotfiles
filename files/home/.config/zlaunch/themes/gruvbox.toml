@@ -32,6 +32,10 @@ icon_placeholder_color = "#928374"       # gray
 empty_state_height = 200.0
 empty_state_color = "#928374"        # gray
 
+[font]
+font_family = "CaskaydiaCove Nerd Font Mono"
+font_size = 15
+
 [calculator]
 icon_background = "#83a59826"        # Aqua
 icon_color = "#83a598"               # Aqua
