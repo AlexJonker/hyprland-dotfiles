@@ -3,6 +3,8 @@ theme = "gruvbox"
 enable_transparency=false
 window_size = [8168, 8168] # Cover all monitors, this is also the highest possible value
 
+max_clipboard_history = 1000
+
 [[search_providers]]
 name = "YouTube"
 trigger = "!yt"
