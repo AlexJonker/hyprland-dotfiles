@@ -1,1 +1,105 @@
-theme = "default"
+[background]
+mode = "file"
+path = "~/Pictures/Wallpapers/gruvbox/minimalistic/dark-bench.png"
+
+[battery]
+enabled = true
+
+[visuals.clock]
+format = "24h"
+style = "standard"
+meridiem_font_size = 22
+meridiem_x = 6
+meridiem_y = 7
+font_family = "CaskaydiaCove Nerd Font Mono"
+font_weight = 700
+color = "#D4BE98"
+font_size = 136
+halign = "center"
+valign = "top"
+x = 0
+y = 0
+relative_to = "auth_panel"
+
+[visuals.date]
+format = "long"
+font_family = "CaskaydiaCove Nerd Font Mono"
+font_weight = 700
+color = "#D4BE98"
+font_size = 34
+halign = "center"
+valign = "center"
+x = 0
+y = 20
+relative_to = "auth_panel"
+
+[visuals.input]
+placeholder = "Password"
+background_color = "rgba(0, 0, 0, 0)"
+border_color = "#D4BE98"
+border_width = 3
+width = 310
+height = 54
+radius = 0
+mask_color = "#7DAEA3"
+font_family = "Google Sans Flex"
+font_weight = 400
+font_size = 16
+halign = "center"
+valign = "bottom"
+x = 0
+y = 0
+relative_to = "auth_panel"
+
+[visuals.status]
+mode = "inline"
+rejected_color = "#FF4D4D"
+pending_color = "#7DAEA3"
+
+[visuals.eye]
+color = "#D4BE98"
+
+[visuals.caps_lock]
+color = "#7DAEA3"
+
+[visuals.placeholder]
+color = "rgba(212, 190, 152, 0.6)"
+
+[visuals.avatar]
+enabled = false
+
+[visuals.username]
+enabled = false
+
+[visuals.keyboard]
+enabled = false
+
+[visuals.battery]
+background_color = "rgba(0, 0, 0, 0.7)"
+background_size = 46
+radius = 0
+color = "#7DAEA3"
+size = 20
+halign = "right"
+valign = "top"
+x = -78
+y = 21
+
+[visuals.now_playing]
+enabled = false
+
+# Auth stack Background
+[[visuals.backdrop]]
+enabled = true
+name = "auth_panel"
+mode = "solid"
+color = "#00000000"
+blur_strength = 24
+radius = 0
+width = 540
+height = 300
+halign = "right"
+valign = "center"
+x = -200
+y = 0
+z = 0
