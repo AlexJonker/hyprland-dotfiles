@@ -7,6 +7,7 @@ ITEMS=(
   "$HOME/.config/zlaunch"
   "$HOME/.config/opencode/tui.json"
   "$HOME/.config/Equicord/themes"
+  "$HOME/.config/veila"
 
   "$HOME/.nanorc"
 
