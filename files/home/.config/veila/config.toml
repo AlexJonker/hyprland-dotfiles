@@ -1,3 +1,6 @@
+[visuals.outputs]
+ui_mode = "single" # Show the full UI on one monitor. Use "all" for every monitor
+
 [background]
 mode = "file"
 path = "~/Pictures/Wallpapers/gruvbox/minimalistic/dark-bench.png"
@@ -87,6 +90,48 @@ y = 21
 
 [visuals.now_playing]
 enabled = false
+
+[visuals.power.suspend]
+enabled = true
+background_color = "rgba(0, 0, 0, 0.7)"
+background_size = 46
+radius = 0
+color = "#7DAEA3"
+size = 20
+confirm = false
+halign = "center"
+valign = "bottom"
+x = -54
+y = 100
+relative_to = "auth_panel"
+
+[visuals.power.reboot]
+enabled = true
+background_color = "rgba(0, 0, 0, 0.7)"
+background_size = 46
+radius = 0
+color = "#D4BE98"
+size = 20
+confirm = false
+halign = "center"
+valign = "bottom"
+x = 0
+y = 100
+relative_to = "auth_panel"
+
+[visuals.power.poweroff]
+enabled = true
+background_color = "rgba(0, 0, 0, 0.7)"
+background_size = 46
+radius = 0
+color = "#FF4D4D"
+size = 20
+confirm = false
+halign = "center"
+valign = "bottom"
+x = 54
+y = 100
+relative_to = "auth_panel"
 
 # Auth stack Background
 [[visuals.backdrop]]
