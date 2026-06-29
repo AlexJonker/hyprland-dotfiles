@@ -3,7 +3,7 @@ ui_mode = "single" # Show the full UI on one monitor. Use "all" for every monito
 
 [background]
 mode = "file"
-path = "~/Pictures/Wallpapers/gruvbox/minimalistic/dark-bench.png"
+path = "~/Pictures/Wallpapers/gruvbox/minimalistic/Boxes.png"
 
 [battery]
 enabled = true
@@ -33,10 +33,11 @@ font_size = 34
 halign = "center"
 valign = "center"
 x = 0
-y = 20
+y = 0
 relative_to = "auth_panel"
 
 [visuals.input]
+relative_to = "auth_panel"
 placeholder = "Password"
 background_color = "rgba(0, 0, 0, 0)"
 border_color = "#D4BE98"
@@ -51,8 +52,7 @@ font_size = 16
 halign = "center"
 valign = "bottom"
 x = 0
-y = 0
-relative_to = "auth_panel"
+y = -90
 
 [visuals.status]
 mode = "inline"
@@ -102,7 +102,7 @@ confirm = false
 halign = "center"
 valign = "bottom"
 x = -54
-y = 100
+y = -20
 relative_to = "auth_panel"
 
 [visuals.power.reboot]
@@ -116,7 +116,7 @@ confirm = false
 halign = "center"
 valign = "bottom"
 x = 0
-y = 100
+y = -20
 relative_to = "auth_panel"
 
 [visuals.power.poweroff]
@@ -130,7 +130,7 @@ confirm = false
 halign = "center"
 valign = "bottom"
 x = 54
-y = 100
+y = -20
 relative_to = "auth_panel"
 
 # Auth stack Background
@@ -138,11 +138,12 @@ relative_to = "auth_panel"
 enabled = true
 name = "auth_panel"
 mode = "solid"
-color = "#00000000"
-blur_strength = 24
+color = "#32302F"
+border_color = "#D4BE98"
+border_width = 10
 radius = 0
 width = 540
-height = 300
+height = 400
 halign = "right"
 valign = "center"
 x = -200
