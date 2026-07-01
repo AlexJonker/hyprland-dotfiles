@@ -12,8 +12,8 @@ ITEMS=(
 
   "$HOME/.nanorc"
 
-  "$HOME/.themes/Gruvbox-B-MB-Dark-Soft-Square"
-  "$HOME/.icons/Gruvbox-Plus-Dark"
+  "$HOME/.local/share/themes"
+  "$HOME/.local/share/icons"
 
   "/usr/share/sddm/themes/gruvbox"
   "/etc/sddm.conf"
