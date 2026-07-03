@@ -9,6 +9,7 @@ ITEMS=(
   "$HOME/.config/Equicord/themes"
   "$HOME/.config/veila"
   "$HOME/.config/paru"
+  "$HOME/.config/fish/config.fish"
 
   "$HOME/.nanorc"
 
