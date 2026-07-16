@@ -8,6 +8,16 @@ path = "~/Pictures/Wallpapers/gruvbox/minimalistic/ALLqk82.png"
 [battery]
 enabled = true
 
+[lock]
+acquire_timeout_seconds = 5
+auto_reload_config = true
+auto_reload_debounce_ms = 250
+auth_backoff_base_ms = 750
+auth_backoff_max_seconds = 12
+hide_cursor = false
+allow_empty_password = true
+suspend_seconds = 5
+
 [visuals.clock]
 format = "24h"
 style = "standard"
