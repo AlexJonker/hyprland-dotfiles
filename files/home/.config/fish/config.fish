@@ -6,6 +6,11 @@ if status is-interactive
 end
 
 
+# Alias dinit's power commands to loginctl's power commands
+alias shutdown="loginctl poweroff"
+alias reboot="loginctl reboot"
+alias suspend="loginctl suspend"
+# alias hibernate="loginctl hibernate"
 
 # List Directory
 alias ls="lsd"
@@ -23,6 +28,3 @@ alias clear="clear && pfetch"
 #change default editor
 export VISUAL="nano"
 export EDITOR="nano"
-
-#set kitty as default terminal
-export TERM=ghostty
