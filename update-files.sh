@@ -1,8 +1,9 @@
 rm -rf ./files
 
 ITEMS=(
-  "$HOME/.config/ghostty"
+  "$HOME/.config/foot"
   "$HOME/.config/mango"
+  "$HOME/.config/xdg-desktop-portal"
   "$HOME/.config/vibepanel"
   "$HOME/.config/zlaunch"
   "$HOME/.config/opencode/tui.json"
