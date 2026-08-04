@@ -1,4 +1,4 @@
-cat ~/.cache/iris/sequences
+source ~/.cache/iris/colors.fish
 
 set -g fish_greeting
 
@@ -27,6 +27,6 @@ alias yeet="paru -Rns"
 alias clear="clear && pfetch"
 
 
-#change default editor
+# Change default editor
 export VISUAL="nano"
 export EDITOR="nano"
