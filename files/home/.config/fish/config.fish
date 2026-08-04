@@ -1,3 +1,5 @@
+cat ~/.cache/iris/sequences
+
 set -g fish_greeting
 
 if status is-interactive

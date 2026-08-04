@@ -11,6 +11,7 @@ ITEMS=(
   "$HOME/.config/veila"
   "$HOME/.config/paru"
   "$HOME/.config/fish/config.fish"
+  "$HOME/.config/iris"
 
   "$HOME/.nanorc"
 
