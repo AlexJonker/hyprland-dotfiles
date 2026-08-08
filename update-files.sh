@@ -1,4 +1,5 @@
-rm -rf ./files
+#!/usr/bin/env bash
+set -euo pipefail
 
 ITEMS=(
   "$HOME/.config/foot"
@@ -17,19 +18,53 @@ ITEMS=(
 
   "$HOME/.local/share/themes"
   "$HOME/.local/share/icons"
-
-  "/usr/share/sddm/themes/gruvbox"
-  "/etc/sddm.conf"
 )
 
-for src in "${ITEMS[@]}"; do
+usage() {
+  echo "Usage: $0 [--upload | --apply]"
+  echo "  --upload   copy system files into ./files"
+  echo "  --apply    copy ./files onto the system"
+  exit 1
+}
+
+get_dest() {
+  local src="$1"
   if [[ "$src" == "$HOME"* ]]; then
-      dest="./files/home${src#$HOME}"
+    echo "./files/home${src#$HOME}"
   else
-      dest="./files${src}"
+    echo "./files${src}"
   fi
+}
 
-  mkdir -p "$(dirname "$dest")"
+upload() {
+  rm -rf ./files
+  for src in "${ITEMS[@]}"; do
+    dest="$(get_dest "$src")"
+    mkdir -p "$(dirname "$dest")"
+    cp -r "$src" "$dest"
+  done
+  echo "Uploaded system files into ./files"
+}
 
-  cp -r "$src" "$dest"
-done
+apply() {
+  for src in "${ITEMS[@]}"; do
+    dest="$(get_dest "$src")"
+    if [[ ! -e "$dest" ]]; then
+      echo "Skipping (not in repo): $dest"
+      continue
+    fi
+
+    sudo mkdir -p "$(dirname "$src")"
+    sudo rm -rf "$src"
+    sudo cp -r "$dest" "$src"
+  done
+  echo "Applied ./files onto the system"
+}
+
+[[ $# -eq 1 ]] || usage
+
+case "$1" in
+  --upload) upload ;;
+  --apply)  apply ;;
+  *) usage ;;
+esac
