@@ -1,0 +1,1 @@
+This contains dinit service scripts that don't exist in the official artix repos.
