@@ -37,7 +37,7 @@ get_dest() {
 }
 
 upload() {
-  rm -rf ./files
+  rm -rf ./files/home
   for src in "${ITEMS[@]}"; do
     dest="$(get_dest "$src")"
     mkdir -p "$(dirname "$dest")"
@@ -54,9 +54,9 @@ apply() {
       continue
     fi
 
-    sudo mkdir -p "$(dirname "$src")"
-    sudo rm -rf "$src"
-    sudo cp -r "$dest" "$src"
+    mkdir -p "$(dirname "$src")"
+    rm -rf "$src"
+    cp -r "$dest" "$src"
   done
   echo "Applied ./files onto the system"
 }
