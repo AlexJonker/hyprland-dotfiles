@@ -1,0 +1,15 @@
+@import "../../.cache/iris/colors.css";
+
+:root {
+  --bar-outline-width: 4.5px;
+  --bar-outline-color: var(--accent);
+  --color-background-bar: var(--bg);
+
+  --color-accent-primary: var(--accent);
+  --color-state-warning: var(--yellow);
+  --color-state-urgent: var(--red);
+}
+
+.bar {
+  margin: 10px 0 10px 10px;
+}

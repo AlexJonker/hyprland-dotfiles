@@ -16,15 +16,13 @@ position = "left"         # "top", "bottom", "left", or "right"
 size = 32
 border_radius = 0
 background_opacity = 1.0 # 0.0 = transparent (islands), 1.0 = solid
-background_color = "#282828"
+# background_color = "#ff0000"
 # outline = true         # Override theme.outline for the bar (omit = inherit)
 
 [widgets]
-# TODO: add workspace number only
 left = [
-  "taskbar",
+  "custom-workspace",
   "mango_layout",
-  "weather",
 ]
 
 center = [
@@ -32,7 +30,7 @@ center = [
 ]
 
 right = [
-  { group = ["cpu", "gpu"] },
+  # { group = ["cpu", "gpu"] },
   "tray",
   "quick_settings",
   "notifications",
@@ -48,7 +46,7 @@ popover_background_opacity = 1  # Override popover opacity (default: max of bar 
 # Example:
 [widgets.clock]
 format_vertical = "%H\n%M"
-show_weather = false # Embed weather content in the clock/calendar popover
+show_weather = true # Embed weather content in the clock/calendar popover
 outline_color = "accent"  # Per-widget outline color: "subtle" | "accent" | "foreground" | "#rrggbb"
 #
 #   [widgets.battery]
@@ -83,7 +81,15 @@ toast_position = "top-left"  # "top-left", "top-center", "top-right", "bottom-le
 #   max_chars = 30
 #
 # See documentation for all widget options.
-# 
+#
+
+[widgets.custom-workspace]
+exec = "stdbuf -oL mmsg watch all-monitors | stdbuf -oL jq -r --unbuffered '.monitors[] | select(.active) | .active_tags[0]'"
+continuous = true
+restart_interval = 5
+template = "{output}"
+tooltip = "Current workspace"
+
 [widgets.battery]
 alerts = true
 low_threshold = 20
