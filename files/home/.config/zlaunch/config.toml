@@ -1,7 +1,6 @@
 theme = "gruvbox"
-# launcher_size = [600, 400]
 enable_transparency=false
-window_size = [2256, 1404] # Cover all monitors, this is also the highest possible value
+enable_backdrop = false
 
 max_clipboard_history = 1000
 
