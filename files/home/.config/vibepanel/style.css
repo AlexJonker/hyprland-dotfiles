@@ -18,7 +18,7 @@
   color: var(--fg);
 }
 
-.vibepanel-tooltip>box {
+.vibepanel-tooltip {
   background-color: var(--bg);
   margin-left: 5.5px;
   border-width: 4.5px;
