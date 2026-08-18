@@ -18,8 +18,11 @@
   color: var(--fg);
 }
 
-.popover,
 .vibepanel-tooltip {
+  background-color: var(--bg);
+}
+
+.popover {
   background-color: var(--bg);
   margin-left: 14.5px;
   border-width: 4.5px;
