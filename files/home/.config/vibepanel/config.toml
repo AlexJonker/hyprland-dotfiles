@@ -101,6 +101,7 @@ show_label = true
 # layouts = ["tile", "scroller", "monocle"]
 
 [theme]
+shadows = false
 mode = "dark" # "auto", "dark", "light", "gtk"
 #               "auto" = wallpaper-adaptive theming
 #               (detects from hyprpaper, awww/swww, wpaperd, waypaper)
@@ -118,7 +119,7 @@ outline_color = "accent"    # "subtle" | "accent" | "foreground" | "#rrggbb"
 outline_opacity = 1.0        # 0.0 = transparent, 1.0 = opaque
 
 [theme.typography]
-font_family = "=CaskaydiaCove Nerd Font Mono" # Empty string inherits the system font
+font_family = "CaskaydiaCove Nerd Font Mono" # Empty string inherits the system font
 font_scale = 0.6          # Text size as a multiplier of widget height
 
 [theme.icons]
