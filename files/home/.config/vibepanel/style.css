@@ -18,8 +18,12 @@
   color: var(--fg);
 }
 
-.vibepanel-tooltip {
+.vibepanel-tooltip>box {
   background-color: var(--bg);
+  margin-left: 5.5px;
+  border-width: 4.5px;
+  border-color: var(--accent);
+  border-style: solid;
 }
 
 .popover {
@@ -32,4 +36,10 @@
 .media-bar-visualizer,
 .media-visualizer {
   color: var(--accent);
+}
+
+.notification-toast {
+  background-color: var(--bg);
+  border-width: 4.5px;
+  border-color: var(--accent);
 }
