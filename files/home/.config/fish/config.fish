@@ -12,7 +12,7 @@ end
 alias shutdown="loginctl poweroff"
 alias reboot="loginctl reboot"
 alias suspend="loginctl suspend"
-# alias hibernate="loginctl hibernate"
+alias hibernate="loginctl hibernate"
 
 # List Directory
 alias ls="lsd"
