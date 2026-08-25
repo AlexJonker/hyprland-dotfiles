@@ -1,7 +1,6 @@
 @import "../../.cache/iris/colors.css";
 
 :root {
-  --bar-outline-width: 5px;
   --bar-outline-color: var(--accent);
   --color-background-bar: var(--bg);
 
@@ -11,6 +10,7 @@
 }
 
 .bar {
+  border-width: 5px;
   margin: 10px 0 10px 10px;
 }
 
@@ -28,8 +28,9 @@
 
 .popover {
   background-color: var(--bg);
-  margin-left: 14.5px;
-  border-width: 4.5px;
+  margin-left: 4px;
+  border-width: 5px;
+  border-left-width: 0px;
   border-color: var(--accent);
 }
 
