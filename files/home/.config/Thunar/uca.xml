@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1783353813392021-1</unique-id>
+	<command>foot --working-directory=%f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>x-content-image-picturecd</icon>
+	<name>Set As Wallpaper</name>
+	<submenu></submenu>
+	<unique-id>1784231810505550-1</unique-id>
+	<command>awww img %f &amp;&amp; iris %f &amp;&amp; mmsg dispatch reload_config</command>
+	<description>Set an image as wallpaper with awww</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>vscodium</icon>
+	<name>Open Codium Here</name>
+	<submenu></submenu>
+	<unique-id>1784402684517761-1</unique-id>
+	<command>codium %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

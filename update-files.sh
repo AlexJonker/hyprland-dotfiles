@@ -13,6 +13,7 @@ ITEMS=(
   "$HOME/.config/paru"
   "$HOME/.config/fish/config.fish"
   "$HOME/.config/iris"
+  "$HOME/.config/Thunar/uca.xml"
 
   "$HOME/.nanorc"
 
